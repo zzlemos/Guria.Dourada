@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guria Dourada</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .botao-curso{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0px 0px 30px 0px;
+        }
+        button{
+            border-radius: 20px;
+            width: 200px;
+            height: 50px;
+            background-color: #581d22;
+            color: white;
+            font-size: large;
+        }
+        button:hover{
+            background-color: #800080;
+        }
+        .conteiner-curso{
+                padding: 80px 30px 0px 30px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+            .header-curso p{
+                padding: 0px 0px 20px 0px;
+                color: #800080;
+                font-size: xx-large;
+                font-family: serif;
+            }
+            .header-curso span{
+                font-family: 'Courier New', Courier, monospace;
+                color: white;
+                font-size: x-large;
+            }
+            .bonus{
+                display: flex;
+                justify-content: center;
+                text-align: start;
+            }
+            .slider{
+                margin: 20px auto;
+                width: 400px;
+                height: 100%;
+                overflow: hidden;
+            }
+            .slides{
+                width: 400%;
+                height: 500px;
+                display: flex;
+            }
+            .slides input{
+                display: none;
+            }
+            .slide{
+                transition: 2s;
+                width: 25%;
+                position: relative;
+            }
+            .slide img{
+                width: 400px;
+            }
+            .manual-navigation{
+                position: absolute;
+                width: 400px;
+                display: flex;
+                justify-content: center;
+                margin-top: -50px;
+            }
+            .manual-btn{
+                border: 2px solid #800080;
+                padding: 5px;
+                cursor: pointer;
+                border-radius: 10px;
+                transition: 1s;
+            }
+            .manual-btn:not(:last-child){
+                margin-right: 40px;
+            }
+            .manual-btn:hover{
+                background-color: #800080;
+            }
+            #radio1:checked ~ .first{
+              margin-left: 0;  
+            }
+            #radio2:checked ~ .first{
+              margin-left: -25%;  
+            }
+            #radio3:checked ~ .first{
+              margin-left: -50%;  
+            }
+            #radio4:checked ~ .first{
+              margin-left: -75%;  
+            }
+            #radio5:checked ~ .first{
+              margin-left: -100%;  
+            }
+            .navigation-auto div{
+                border: 2px solid #800080;
+                padding: 5px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 1s;
+            }
+            .navigation-auto{
+                position: absolute;
+                width: 400px;
+                margin-top: 450px;
+                display: flex;
+                justify-content: center;
+            }
+            .navigation-auto div:not(:last-child){
+                margin-right: 40px;
+            }
+            .radio1:checked ~ .navigation-auto .auto-btn1{
+               background-color: #800080; 
+            }
+            .radio2:checked ~ .navigation-auto .auto-btn2{
+               background-color: #800080; 
+            }
+            .radio3:checked ~ .navigation-auto .auto-btn3{
+               background-color: #800080; 
+            }
+            .radio4:checked ~ .navigation-auto .auto-btn4{
+               background-color: #800080; 
+            }
+            .radio5:checked ~ .navigation-auto .auto-btn5{
+               background-color: #800080; 
+            }
+            
+        @media (max-width:1000px){
+            .conteiner-curso{
+                padding: 80px 30px 0px 30px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+            .header-curso p{
+                padding: 0px 0px 20px 0px;
+                color: #800080;
+                font-size: xx-large;
+                font-family: serif;
+            }
+            .header-curso span{
+                font-family: 'Courier New', Courier, monospace;
+                color: white;
+                font-size: large;
+            }
+            .bonus{
+                display: flex;
+                justify-content: center;
+                text-align: start;
+            }
+            .slider{
+                margin: 20px auto;
+                width: 400px;
+                height: 100%;
+                overflow: hidden;
+            }
+            
+            .slides{
+                width: 400%;
+                height: 500px;
+                display: flex;
+            }
+            .slides input{
+                display: none;
+            }
+            .slide{
+                transition: 2s;
+                width: 25%;
+                position: relative;
+            }
+            .slide img{
+                width: 400px;
+            }
+            .manual-navigation{
+                position: absolute;
+                width: 400px;
+                display: flex;
+                justify-content: center;
+                margin-top: -50px;
+            }
+            .manual-btn{
+                border: 2px solid #800080;
+                padding: 5px;
+                cursor: pointer;
+                border-radius: 10px;
+                transition: 1s;
+            }
+            .manual-btn:not(:last-child){
+                margin-right: 40px;
+            }
+            .manual-btn:hover{
+                background-color: #800080;
+            }
+            #radio1:checked ~ .first{
+              margin-left: 0%;  
+            }
+            #radio2:checked ~ .first{
+              margin-left: -25%;  
+            }
+            #radio3:checked ~ .first{
+              margin-left: -50%;  
+            }
+            #radio4:checked ~ .first{
+              margin-left: -75%;  
+            }
+            #radio5:checked ~ .first{
+              margin-left: -100%;  
+            }
+            .navigation-auto div{
+                border: 2px solid #800080;
+                padding: 5px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 1s;
+                
+            }
+            .navigation-auto{
+                position: absolute;
+                width: 400px;
+                margin-top: 450px;
+                display: flex;
+                justify-content: center;
+            }
+            .navigation-auto div:not(:last-child){
+                margin-right: 40px;
+            }
+            .radio1:checked ~ .navigation-auto .auto-btn1{
+               background-color: #800080; 
+            }
+            .radio2:checked ~ .navigation-auto .auto-btn2{
+               background-color: #800080; 
+            }
+            .radio3:checked ~ .navigation-auto .auto-btn3{
+               background-color: #800080; 
+            }
+            .radio4:checked ~ .navigation-auto .auto-btn4{
+               background-color: #800080; 
+            }
+            .radio5:checked ~ .navigation-auto .auto-btn5{
+               background-color: #800080; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo">  
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="Quem somos.html">Quem somos</a>
+                </li>
+                <li>
+                    <a href="Catálogo.html">Catálogo</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="conteiner-curso">
+        <div class="header-curso">
+            <p>PROTOCOLO PREMIUM</p>
+            <span>Nosso curso de Protocolos Premium oferece resultados incríveis para suas clientes, impulsionando ainda mais seus resultados e, automaticamente, suas vendas... 
+                <br><br>
+            Aprenda os 10 PROTOCOLOS Exclusivos do Spa Guria Dourada, que levarão sua expertise em Estética e Bronzeamento a outro patamar.
+        <br><br>E tem mais! Ao se inscrever, você receberá como BÔNUS: <br></p>
+    <span class="bonus">
+        - Decapagem Corporal <br>
+        - Esfoliação Manual Corporal <br>
+        - Banho de Lua 
+    </span>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+
+            <div class="slide first">
+                <img src="IMG/Curso 1.jpg" alt="imagem 1">
+            </div>
+            <div class="slide">
+                <img src="IMG/Curso 2.jpg" alt="imagem 2">
+            </div>
+            <div class="slide">
+                <img src="IMG/Curso 3.JPG" alt="imagem 3">
+            </div>
+            <div class="slide">
+                <img src="IMG/Curso 4.jpg" alt="imagem 4">
+            </div>
+            <div class="slide">
+                <img src="IMG/Curso 5.jpg" alt="imagem 5">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+        </div>
+
+        <div class="manual-navigation">
+             <label for="radio1" class="manual-btn"></label>
+             <label for="radio2" class="manual-btn"></label>
+             <label for="radio3" class="manual-btn"></label>
+             <label for="radio4" class="manual-btn"></label>
+             <label for="radio5" class="manual-btn"></label>
+        </div>
+            
+    </div>
+    
+    <div class="botao-curso">
+        <a href="https://go.hotmart.com/W92276981W?dp=1" target="_blank">
+            <button>Adquirir Curso</button>
+        </a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>

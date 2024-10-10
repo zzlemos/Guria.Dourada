@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guria Dourada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    .main-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+            .slider{
+                margin: 20px 0px 0px 0px;
+                width: 400px;
+                height: 100%;
+                overflow: hidden;
+            }
+            
+            .slides{
+                width: 400%;
+                height: 500px;
+                display: flex;
+            }
+            .slides input{
+                display: none;
+            }
+            .slide{
+                transition: 2s;
+                width: 25%;
+
+            }
+            .slide img{
+                width: 400px;
+            }
+            .manual-navigation{
+                position: absolute;
+                width: 400px;
+                display: flex;
+                justify-content: center;
+                margin-top: -50px;
+            }
+            .manual-btn{
+                border: 2px solid #800080;
+                padding: 5px;
+                cursor: pointer;
+                border-radius: 10px;
+                transition: 1s;
+            }
+            .manual-btn:not(:last-child){
+                margin-right: 40px;
+            }
+            .manual-btn:hover{
+                background-color: #800080;
+            }
+            #radio1:checked ~ .first{
+              margin-left: 0%;  
+            }
+            #radio2:checked ~ .first{
+              margin-left: -25%;  
+            }
+            #radio3:checked ~ .first{
+              margin-left: -50%;  
+            }
+            #radio4:checked ~ .first{
+              margin-left: -75%;  
+            }
+            #radio5:checked ~ .first{
+              margin-left: -100%;  
+            }
+            .navigation-auto div{
+                border: 2px solid #800080;
+                padding: 5px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 1s;
+                
+            }
+            .navigation-auto{
+                position: absolute;
+                width: 400px;
+                margin-top: 450px;
+                display: flex;
+                justify-content: center;
+            }
+            .navigation-auto div:not(:last-child){
+                margin-right: 40px;
+            }
+            .radio1:checked ~ .navigation-auto .auto-btn1{
+               background-color: #800080; 
+            }
+            .radio2:checked ~ .navigation-auto .auto-btn2{
+               background-color: #800080; 
+            }
+            .radio3:checked ~ .navigation-auto .auto-btn3{
+               background-color: #800080; 
+            }
+            .radio4:checked ~ .navigation-auto .auto-btn4{
+               background-color: #800080; 
+            }
+            .radio5:checked ~ .navigation-auto .auto-btn5{
+               background-color: #800080; 
+            }
+
+            .title-destaques{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .title-destaques p{
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: large;
+                padding: 30px 50px 15px 50px;
+            }
+
+
+
+
+    @media (max-width:1000px){
+        .slider{
+                margin: 20px 0px 0px 0px;
+                width: 400px;
+                height: 100%;
+                overflow: hidden;
+            }
+            
+            .slides{
+                width: 400%;
+                height: 500px;
+                display: flex;
+            }
+            .slides input{
+                display: none;
+            }
+            .slide{
+                transition: 2s;
+                width: 25%;
+
+            }
+            .slide img{
+                width: 400px;
+            }
+            .manual-navigation{
+                position: absolute;
+                width: 400px;
+                display: flex;
+                justify-content: center;
+                margin-top: -50px;
+            }
+            .manual-btn{
+                border: 2px solid #800080;
+                padding: 5px;
+                cursor: pointer;
+                border-radius: 10px;
+                transition: 1s;
+            }
+            .manual-btn:not(:last-child){
+                margin-right: 40px;
+            }
+            .manual-btn:hover{
+                background-color: #800080;
+            }
+            #radio1:checked ~ .first{
+              margin-left: 0%;  
+            }
+            #radio2:checked ~ .first{
+              margin-left: -25%;  
+            }
+            #radio3:checked ~ .first{
+              margin-left: -50%;  
+            }
+            #radio4:checked ~ .first{
+              margin-left: -75%;  
+            }
+            #radio5:checked ~ .first{
+              margin-left: -100%;  
+            }
+            .navigation-auto div{
+                border: 2px solid #800080;
+                padding: 5px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 1s;
+                
+            }
+            .navigation-auto{
+                position: absolute;
+                width: 400px;
+                margin-top: 450px;
+                display: flex;
+                justify-content: center;
+            }
+            .navigation-auto div:not(:last-child){
+                margin-right: 40px;
+            }
+            .radio1:checked ~ .navigation-auto .auto-btn1{
+               background-color: #800080; 
+            }
+            .radio2:checked ~ .navigation-auto .auto-btn2{
+               background-color: #800080; 
+            }
+            .radio3:checked ~ .navigation-auto .auto-btn3{
+               background-color: #800080; 
+            }
+            .radio4:checked ~ .navigation-auto .auto-btn4{
+               background-color: #800080; 
+            }
+            .radio5:checked ~ .navigation-auto .auto-btn5{
+               background-color: #800080; 
+            }
+
+            .title-destaques{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .title-destaques p{
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: large;
+                padding: 30px 50px 15px 50px;
+            }
+            .main-header{
+                display: flex;
+                flex-direction: column;
+            }
+    }
+</style>
+</head>
+<body>
+    <div class="fundo">  
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="Quem somos.html">Quem somos</a>
+                </li>
+                <li>
+                    <a href="Catálogo.html">Catálogo</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="foto1">
+        <img src="IMG/Espaço .JPG" alt=""
+        width="100%">
+    </div>
+    <header>
+    <div class="text">
+            <p>
+                Você sabia que para garantir um bronze e uma pele dourada o ano todo não precisa ser verão ? 
+            </p>
+            <div class="text2">
+                <p>
+                    Aqui na Guria Dourada nós oferecemos serviços de bronzeamentos que são rápidos seguros e uniforme, ideal para todos os tipos de pele. 
+                </p>
+            </div>
+            
+        </div>
+        <div class="foto2">
+            <img src="IMG/IMG_4534.jpg" alt=""
+            width="500px">
+        </div>
+    </header>
+    <div class="conteiner-fita">
+        <div class="fita">
+            <p>Todos os nossos bronzeamentos incluem a fita e a colocação da mesma, para ter aquela marquinha linda e definida que toda mulher gosta !</p>
+        </div>
+        
+    
+        <div class="title-catalogo">
+            <p>Destaques</p>
+        </div>
+    </div>
+    <section>
+        <div class="conteiner">
+
+            <div class="card2">
+                <a href="https://wa.me/5551997276272" target="_blank">
+                    <div class="card-header">
+                        <h1>Protocolo Xenon</h1>
+                        <span>R$ 139,99</span>
+                    </div>
+                    <div class="card-body">
+                        <span>Indicado para:</span>
+                    <p>Peles claras que não ficam vermelhas com facilidade.<p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/5551997276272" target="_blank">Pacote de 4 sessões: <br>
+                            <span>R$ 459,99</span>
+                        </a>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="card4">
+                    <a href="https://wa.me/5551997276272" target="_blank">
+                        <div class="card-header">
+                            <h1>Safira Bronze</h1>
+                            <span>R$ 179,99</span>
+                        </div>
+                        <div class="card-body">
+                            <span>Protocolo Avançado:</span>
+                            <p>Mix de produtos,tétcnica EXCLUSIVA GD. <br>
+                                Marquinha perfeita. <br>
+                                Durabilidade de 6 meses.<p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://wa.me/5551997276272" target="_blank">Pacote de 4 sessões: <br>
+                                        <span>R$ 599,99</span>
+                                    </a>
+                                </a>
+                            </div>
+                        </div>
+
+            <div class="card6">
+                <a href="https://wa.me/5551997276272" target="_blank">
+                    <div class="card-header">
+                        <h1>Diamante Negro</h1>
+                        <span>R$ 189,99</span>
+                    </div>
+                    <div class="card-body">
+                        <span>Lançamento:</span>
+                        <p>Protocolo Avançado para pele morena e pele negra. <br>
+                            Formulado com extrato de henna e pimenta negra. <p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://wa.me/5551997276272" target="_blank">Lançamento !</a>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                <div class="card7">
+                    <a href="https://wa.me/5551997276272" target="_blank">
+                        <div class="card-header">
+                            <h1>Mega Bronze</h1>
+                            <span>R$ 259,99</span>
+                        </div>
+                        <div class="card-body">
+                            <span>Protocolo Avançado:</span>
+                            <p>Proporciona 6x o resultado! <br>
+                                Contendo preparação pre-bronze com banho de lua gourmet.<p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://wa.me/5551997276272" target="_blank">Lançamento !</a>
+                                </a>
+                            </div>
+                        </div>
+                            
+                    </section>
+
+                    <main>
+                        <div class="main-header">
+
+                            <div class="title-destaques">
+                                <p>Não é só sobre uma marquinha perfeita e incrível... <br>
+                                É muito mais, é autocuidado, é sobre melhorar a nossa auto estima é se amar, se imporderar.</p>
+                            </div>
+                        
+                                <div class="slider">
+                                    <div class="slides">
+                                        <input type="radio" name="radio-btn" id="radio1">
+                                        <input type="radio" name="radio-btn" id="radio2">
+                                        <input type="radio" name="radio-btn" id="radio3">
+                                        <input type="radio" name="radio-btn" id="radio4">
+                                        <input type="radio" name="radio-btn" id="radio5">
+                            
+                                        <div class="slide first">
+                                            <img src="IMG/IMG_2551.jpg" alt="imagem 1">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="IMG/IMG_4846.jpg" alt="imagem 2">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="IMG/Curso 1.jpg" alt="imagem 3">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="IMG/IMG_8680.jpg" alt="imagem 4">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="IMG/IMG_8662.jpg" alt="imagem 5">
+                                        </div>
+                            
+                                        <div class="navigation-auto">
+                                            <div class="auto-btn1"></div>
+                                            <div class="auto-btn2"></div>
+                                            <div class="auto-btn3"></div>
+                                            <div class="auto-btn4"></div>
+                                            <div class="auto-btn5"></div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="manual-navigation">
+                                         <label for="radio1" class="manual-btn"></label>
+                                         <label for="radio2" class="manual-btn"></label>
+                                         <label for="radio3" class="manual-btn"></label>
+                                         <label for="radio4" class="manual-btn"></label>
+                                         <label for="radio5" class="manual-btn"></label>
+                                    </div>
+                                        
+                                </div>
+                        
+                        
+                                <script src="script.js"></script>
+                        
+
+                            <div class="botao">
+                                <p>Atendemos por aqui!</p>
+                                <a href="https://wa.me/5551997276272" target="_blank">
+                                    <button class="whats">Whatsapp</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="conteiner-main">
+                            <div class="main-text">
+                                <p>Um pouquinho dos detalhes que te esperam no novo espaço...</p>
+                            </div>
+                        </div>
+                        <div class="main-body">
+                            <img src="IMG/Espaço 2 .JPG" alt=""
+                            width="100%">
+                        </div>
+                        <div class="main-curso">
+                            <div class="curso-header">
+                                <p>Se você já empreende na área de bronzeamento, venha descobrir os segredos que transformaram Spa Guria Dourada em um sucesso e referência !</p>
+                            </div>
+                            <div class="card-curso">
+                                <a href="CURSO.HTML">
+                                    <div class="card-curso-header">
+                                        <h1>PROTOCOLOS PREMIUM</h1>
+                                        <p>Torne-se uma Personal Bronzer de Alta Performance com nosso curso PREMIUM.</p>
+                                    </div>
+                                    <div class="card-curso-body">
+                                        <img src="IMG/IMG_0877-2.jpg" alt=""
+                                        width="100%">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </main>
+                    
+                            
+                                       
+
+    
+        
+  
+</body>
+</html>
